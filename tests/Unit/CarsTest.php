@@ -22,4 +22,13 @@ class CarsTest extends TestCase
         $car->year= "2017";
         $this->assertTrue($car->save());
     }
+    public function testUpdateCarYear()
+    {
+        $car = Car::all()->last();
+        //dd($car);
+        //$car->year ='2000'; To directly assign a value
+        $car-> where('id', '51')
+            -> update(['year' => '2000']);
+        $this->assertTrue($car->save());
+    }
 }
