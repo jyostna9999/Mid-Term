@@ -26,9 +26,10 @@ class UsersTest extends TestCase
     {
        $user = User::all()->last();
        //dd($user);
-        //$user->name="Steve Smith"; To directly update the name
+        //$user->name="Steve Smith"; To assign a name and update it using update()
+        //$this->assertTrue($user->update());
        $user-> where('name', 'Jyostna')
-            -> update(['name' => 'Steve Smith']);
+          -> update(['name' => 'Steve Smith']);
 
        $this->assertTrue($user->save());
     }
