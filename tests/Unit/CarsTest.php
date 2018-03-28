@@ -29,8 +29,7 @@ class CarsTest extends TestCase
         //dd($car);
         //$car->year ='2000'; To directly assign a value
         //$thi->assertTrue($car->update());
-        $car-> where('id', '51')
-            -> update(['year' => 2000]);
+        $car-> where('id', '51')-> update(['year' => 2000]);
         $this->assertTrue($car->save());
     }
     public function testDeleteCar()
@@ -46,11 +45,14 @@ class CarsTest extends TestCase
         $this->assertEquals(50,$carsCount);
         $this->assertInternalType('int',$carsCount);
     }
-   /* car year daatype is int public function testCarYearDataType()
+   // car year daatype is int
+   public function testCarYearDataType()
     {
-        $car = Car::find(1);
+        $car = Car::inRandomOrder() ->first();
         //dd($car->year);
-      // dd(gettype($car->Year));
-        $this->assertInternalType('string',$car->Year);
-    }*/
+      //dd(gettype($car->Year));
+        $year = (int) $car->Year;
+        //dd($year);
+        $this->assertInternalType('int',$year);
+    }
 }
