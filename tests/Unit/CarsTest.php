@@ -55,4 +55,10 @@ class CarsTest extends TestCase
         //dd($year);
         $this->assertInternalType('int',$year);
     }
+    public function testCarMake()
+    {
+        $car = Car::inRandomOrder()->first();
+       // dd($car->Make);
+        $this->assertContains($car->Make,["Ford","Honda","Toyota"]);
+    }
 }
