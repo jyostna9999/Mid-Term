@@ -60,6 +60,7 @@ class CarsTest extends TestCase
         $car = Car::inRandomOrder()->first();
        // dd($car->Make);
         $this->assertContains($car->Make,["Ford","Honda","Toyota"]);
+
     }
     public function testCarModelDataType()
     {
