@@ -14,6 +14,8 @@ class UsersTest extends TestCase
      *
      * @return void
      */
+
+    /* Unit tests performed for midterm
     public function testInsertUser()
     {
         $user = new User();
@@ -34,7 +36,7 @@ class UsersTest extends TestCase
           -> update(['name' => 'Steve Smith']);
 
        $this->assertTrue($user->save());
-    }*/
+    }
     public function testDeleteUser()
     {
         $user = User::all()->last();
@@ -47,5 +49,12 @@ class UsersTest extends TestCase
         $usersCount = count($users);
         //$this->assertEquals(50,$usersCount);
         $this->assertInternalType("int",$usersCount);
+    }*/
+
+    public function testSave()
+    {
+        $user = factory(\App\User::class)->make();
+        $this->assertTrue($user->save());
     }
+
 }
