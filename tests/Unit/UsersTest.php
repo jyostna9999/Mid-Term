@@ -17,12 +17,14 @@ class UsersTest extends TestCase
     public function testInsertUser()
     {
         $user = new User();
-        $user->name ='Jyostna';
+        //$user->name ='Jyostna';
         $user->email ='ju36@njit.edu';
         $user->password='12345';
         $this->assertTrue($user->save());
     }
-    public function testUpdateUserName()
+
+    /*Commenting this test method as it became obsolete after removing username
+     * public function testUpdateUserName()
     {
        $user = User::all()->last();
        //dd($user);
@@ -32,7 +34,7 @@ class UsersTest extends TestCase
           -> update(['name' => 'Steve Smith']);
 
        $this->assertTrue($user->save());
-    }
+    }*/
     public function testDeleteUser()
     {
         $user = User::all()->last();
