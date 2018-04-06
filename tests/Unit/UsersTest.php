@@ -56,5 +56,9 @@ class UsersTest extends TestCase
         $user = factory(\App\User::class)->make();
         $this->assertTrue($user->save());
     }
+    public function testSample()
+    {
+        $this->assertTrue('true');
+    }
 
 }
