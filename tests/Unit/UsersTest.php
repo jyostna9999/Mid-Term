@@ -72,6 +72,10 @@ class UsersTest extends TestCase
     {
         $this->assertTrue('true');
     }
+    public function origTest()
+    {
+        $this->assertTrue('true');
+    }
     public function testQuestions()
     {
         $user = factory(\App\User::class)->make();
