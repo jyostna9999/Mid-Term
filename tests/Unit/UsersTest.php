@@ -64,6 +64,10 @@ class UsersTest extends TestCase
     {
         $this->assertTrue('true');
     }
+    public function testSample12()
+    {
+        $this->assertTrue('true');
+    }
 
     public function testQuestions()
     {
